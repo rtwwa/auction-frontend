@@ -48,7 +48,6 @@ const Header = () => {
         </div>
         <div className="text-3xl flex gap-2">
           <SearchBar />
-          <IoMdSearch className="cursor-pointer hover:opacity-50 transition-all duration-300 ease-in-out" />
           <CartDropdown
             cartItems={[
               { name: "Кроссовки Nike", quantity: 1, price: 5999 },
