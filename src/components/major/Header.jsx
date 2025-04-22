@@ -1,10 +1,8 @@
 import React from "react";
 import { FaRegUser } from "react-icons/fa";
-import { MdOutlineShoppingCart } from "react-icons/md";
-import { IoMdSearch } from "react-icons/io";
-import DropdownMenu from "./DropdownMenu";
-import CartDropdown from "./CartDropdown";
-import SearchBar from "./SearchBar";
+import DropdownMenu from "../reusable/DropdownMenu";
+import CartDropdown from "../reusable/CartDropdown";
+import SearchBar from "../major/SearchBar";
 
 const testData = [
   {
@@ -41,7 +39,6 @@ const Header = () => {
         <div className="flex gap-4">
           <div>ДЛЯ НЕГО</div>
           <div>ДЛЯ НЕЕ</div>
-          <div>ДЛЯ ДЕТЕЙ</div>
         </div>
         <div className="absolute top-[24px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl header-font">
           405

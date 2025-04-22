@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import SmallCard from "./items/SmallCard";
+import SmallCard from "../items/SmallCard";
 
 const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,11 +43,11 @@ const Carousel = ({ items }) => {
         {items.map((item, index) => (
           <div key={item.id || index} className="snap-center">
             <SmallCard
-              title={item.title}
+              title={item.brand}
               description={item.description}
-              imageUrl={item.imageUrl}
-              imageUrlOnHover={item.imageUrlOnHover}
-              lowestPrice={item.lowestPrice}
+              imageUrl={item.image_url}
+              imageUrlOnHover={item.image_url2}
+              lowestPrice={item.price_start}
             />
           </div>
         ))}
