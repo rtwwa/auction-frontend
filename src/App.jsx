@@ -2,10 +2,11 @@ import Carousel from "./components/reusable/Carousel";
 import Header from "./components/major/Header";
 import MainAd from "./components/MainAd";
 import PIC from "./assets/main-ad.png";
-import api from "./api/products/products.api";
+import api from "./api/products.api";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./api/AuthProvider";
 import { Link } from "react-router-dom";
+import ProductsList from "./components/items/ProductsList";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -13,7 +14,7 @@ function App() {
 
   useEffect(() => {
     api
-      .getProducts(1, 3)
+      .getProducts()
       .then((data) => {
         setProducts(data.products);
       })
@@ -30,6 +31,7 @@ function App() {
         <div className="text-3xl font-bold">
           <p className="block w-fit mx-auto">Самые популярные позиции</p>
           <Carousel className="w-full" items={products} />
+          <ProductsList products={products} />
         </div>
         <div>
           {isAuthenticated && ( // Only show if isAuthenticated is true

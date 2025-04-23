@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_BASE_URL = "/api/auth"; // Замените на фактический URL вашего API
+const apiUrl = import.meta.env.VITE_API_URL;
+const API_BASE_URL = `${apiUrl}/api/auth`;
 
 async function registerUser(username, email, password) {
   try {

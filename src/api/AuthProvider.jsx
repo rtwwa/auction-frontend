@@ -6,7 +6,8 @@ axios.defaults.withCredentials = true;
 
 export const AuthContext = createContext(null);
 
-const API_BASE_URL = "http://localhost:3000/api/auth";
+const apiUrl = import.meta.env.VITE_API_URL;
+const API_BASE_URL = `${apiUrl}/api/auth`;
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
